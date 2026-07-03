@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shopping Cart | Crown Clips</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI,sans-serif;
+}
+
+body{
+background:#f8f8f8;
+}
+
+header{
+background:#fff;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+color:#ff4f81;
+}
+
+nav a{
+text-decoration:none;
+margin:12px;
+color:#333;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#ff4f81;
+}
+
+.container{
+width:90%;
+margin:40px auto;
+}
+
+table{
+width:100%;
+background:white;
+border-collapse:collapse;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+th{
+background:#ff4f81;
+color:white;
+padding:15px;
+}
+
+td{
+padding:15px;
+text-align:center;
+border-bottom:1px solid #eee;
+}
+
+img{
+width:80px;
+height:80px;
+object-fit:cover;
+border-radius:10px;
+}
+
+button{
+padding:8px 15px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+.qty{
+background:#ff4f81;
+color:white;
+}
+
+.remove{
+background:red;
+color:white;
+}
+
+.summary{
+margin-top:30px;
+background:white;
+padding:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+text-align:right;
+}
+
+.summary h2{
+margin-bottom:15px;
+}
+
+.checkout{
+background:#28a745;
+color:white;
+padding:12px 30px;
+font-size:18px;
+}
+
+footer{
+margin-top:40px;
+background:#222;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">👑 Crown Clips</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="shop.html">Shop</a>
+<a href="products.html">Products</a>
+<a href="category.html">Categories</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="cart.html">Cart</a>
+
+</nav>
+
+</header>
+
+<div class="container">
+
+<h1>Your Shopping Cart</h1>
+
+<br>
+
+<table>
+
+<tr>
+
+<th>Product</th>
+<th>Name</th>
+<th>Price</th>
+<th>Quantity</th>
+<th>Total</th>
+<th>Action</th>
+
+</tr>
+
+<tr>
+
+<td><img src="e.jpeg"></td>
+
+<td>Hair Clip</td>
+
+<td id="price">250</td>
+
+<td>
+
+<button class="qty" onclick="minus()">-</button>
+
+<span id="qty">1</span>
+
+<button class="qty" onclick="plus()">+</button>
+
+</td>
+
+<td>Rs <span id="total">250</span></td>
+
+<td>
+
+<button class="remove" onclick="removeItem()">Remove</button>
+
+</td>
+
+</tr>
+
+</table>
+
+<div class="summary">
+
+<h2>Grand Total : Rs <span id="grand">250</span></h2>
+
+<button class="checkout"
+onclick="window.location='checkout.html'">
+
+Proceed to Checkout
+
+</button>
+
+</div>
+
+</div>
+
+<footer>
+
+© 2026 Crown Clips | All Rights Reserved
+
+</footer>
+
+<script>
+
+let quantity=1;
+let price=250;
+
+function plus(){
+
+quantity++;
+
+document.getElementById("qty").innerHTML=quantity;
+
+update();
+
+}
+
+function minus(){
+
+if(quantity>1){
+
+quantity--;
+
+document.getElementById("qty").innerHTML=quantity;
+
+update();
+
+}
+
+}
+
+function update(){
+
+let total=quantity*price;
+
+document.getElementById("total").innerHTML=total;
+
+document.getElementById("grand").innerHTML=total;
+
+}
+
+function removeItem(){
+
+alert("Product Removed Successfully!");
+
+location.reload();
+
+}
+
+</script>
+
+</body>
+
+</html>
+```

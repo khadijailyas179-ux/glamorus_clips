@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Crown Clips | Home</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Segoe UI, Arial, sans-serif;
+            background: #fafafa;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+            position: sticky;
+            top: 0;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+            color: #ff4f81;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 10px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #ff4f81;
+        }
+
+        .icons {
+            font-size: 22px;
+        }
+
+        .search {
+            padding: 10px;
+            width: 280px;
+            border-radius: 25px;
+            border: 1px solid #ccc;
+        }
+
+        .hero {
+            height: 420px;
+            background: linear-gradient(rgba(0, 0, 0, .35), rgba(0, 0, 0, .35)),
+                url('main page pic.png') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+        }
+
+        .hero button {
+            margin-top: 20px;
+            padding: 12px 28px;
+            background: #ff4f81;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+
+        section {
+            padding: 40px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #ff4f81;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card .p {
+            padding: 15px;
+        }
+
+        .price {
+            color: #ff4f81;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background: #ff4f81;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        footer {
+            background: #222;
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .review {
+            background: #fff;
+            border-left: 5px solid #ff4f81;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .newsletter {
+            text-align: center;
+            background: #ffe9f2;
+            padding: 30px;
+        }
+
+        .newsletter input {
+            padding: 10px;
+            width: 280px;
+        }
+
+        .newsletter button {
+            padding: 10px 20px;
+            background: #ff4f81;
+            color: #fff;
+            border: none;
+        }
+
+    </style>
+
+    <script>
+
+        let cart = 0;
+
+        function addCart(name) {
+
+            cart++;
+
+            document.getElementById("cart").innerText = "🛒 Cart(" + cart + ")";
+
+            alert(name + " added to cart!");
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            👑 Crown Clips
+        </div>
+
+        <input class="search" placeholder="Search products...">
+
+        <nav>
+
+<a href="index.html">Home</a>
+<a href="shop.html">Shop</a>
+<a href="products.html">Products</a>
+<a href="category.html">Categories</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="cart.html">Cart</a>
+
+        </nav>
+
+        <div class="icons">
+
+            ❤ |
+            <span id="cart">🛒 Cart(0)</span>
+
+        </div>
+
+    </header>
+
+    <div class="hero">
+
+        <h1>Beautiful Hair Accessories</h1>
+
+        <p>Stylish • Trendy • Affordable</p>
+
+        <button>Shop Now</button>
+
+    </div>
+
+    <section>
+
+        <h2>Featured Products</h2>
+
+        <div class="grid">
+
+            <div class="card">
+
+                <img src="1.jpeg">
+
+                <div class="p">
+
+                    <h3>Hair Clips</h3>
+
+                    <p class="price">Rs 250</p>
+
+                    <button class="btn" onclick="addCart('Hair Clips')">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img src="Scrunchies.avif">
+
+                <div class="p">
+
+                    <h3>Scrunchies</h3>
+
+                    <p class="price">Rs 300</p>
+
+                    <button class="btn" onclick="addCart('Scrunchies')">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img src="Bows.jpeg">
+
+                <div class="p">
+
+                    <h3>Bow Clips</h3>
+
+                    <p class="price">Rs 350</p>
+
+                    <button class="btn" onclick="addCart('Bow Clips')">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>Customer Reviews</h2>
+
+        <div class="grid">
+
+            <div class="review">
+                ⭐⭐⭐⭐⭐
+                <br>
+                Beautiful quality and fast delivery.
+            </div>
+
+            <div class="review">
+                ⭐⭐⭐⭐⭐
+                <br>
+                I love these hair clips.
+            </div>
+
+            <div class="review">
+                ⭐⭐⭐⭐⭐
+                <br>
+                Affordable and stylish.
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="newsletter">
+
+        <h2>Subscribe to Newsletter</h2>
+
+        <input placeholder="Enter your email">
+
+        <button>Subscribe</button>
+
+    </div>
+
+    <footer>
+
+        <p>
+            Quick Links | Privacy Policy | Contact Us
+        </p>
+
+        <p>
+            © 2026 Crown Clips. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

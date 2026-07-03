@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Products - Crown Clips</title>
+
+    <style>
+
+        body {
+            font-family: Segoe UI;
+            margin: 0;
+            background: #f7f7f7;
+        }
+
+        header,
+        footer {
+            background: #fff;
+            padding: 15px 30px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 10px;
+        }
+
+        a:hover {
+            color: #ff4f81;
+        }
+
+        .search {
+            padding: 10px;
+            width: 260px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, .1);
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .info {
+            padding: 15px;
+        }
+
+        .price {
+            color: #ff4f81;
+            font-weight: bold;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background: #ff4f81;
+            color: #fff;
+            cursor: pointer;
+        }
+
+    </style>
+
+    <script>
+
+        function searchProducts() {
+
+            let f = document.getElementById("s").value.toLowerCase();
+
+            document.querySelectorAll(".card").forEach(c => {
+
+                c.style.display =
+                    c.dataset.name.includes(f) ? "block" : "none";
+
+            });
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h2>👑 Crown Clips</h2>
+
+        <div>
+
+<a href="index.html">Home</a>
+<a href="shop.html">Shop</a>
+<a href="products.html">Products</a>
+<a href="category.html">Categories</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="cart.html">Cart</a>
+
+        </div>
+
+        <input
+            id="s"
+            class="search"
+            onkeyup="searchProducts()"
+            placeholder="Search..."
+        >
+
+    </header>
+
+    <div class="grid">
+
+        <div class="card" data-name="hair clip">
+
+            <img src="e.jpeg">
+
+            <div class="info">
+
+                <h3>Hair Clip</h3>
+
+                <p>⭐⭐⭐⭐☆</p>
+
+                <p class="price">Rs 250</p>
+
+                <button>Add to Cart</button>
+
+            </div>
+
+        </div>
+
+        <div class="card" data-name="scrunchie">
+
+            <img src="b.jpeg">
+
+            <div class="info">
+
+                <h3>Scrunchie</h3>
+
+                <p>⭐⭐⭐⭐☆</p>
+
+                <p class="price">Rs 300</p>
+
+                <button>Add to Cart</button>
+
+            </div>
+
+        </div>
+
+        <div class="card" data-name="bow clip">
+
+            <img src="h.jpeg">
+
+            <div class="info">
+
+                <h3>Bow Clip</h3>
+
+                <p>⭐⭐⭐⭐☆</p>
+
+                <p class="price">Rs 350</p>
+
+                <button>Add to Cart</button>
+
+            </div>
+
+        </div>
+
+        <div class="card" data-name="pearl clip">
+
+            <img src="c.jpeg">
+
+            <div class="info">
+
+                <h3>Pearl Clip</h3>
+
+                <p>⭐⭐⭐⭐☆</p>
+
+                <p class="price">Rs 450</p>
+
+                <button>Add to Cart</button>
+
+            </div>
+
+        </div>
+
+        <div class="card" data-name="butterfly clip">
+
+            <img src="d.jpeg">
+
+            <div class="info">
+
+                <h3>Butterfly Clip</h3>
+
+                <p>⭐⭐⭐⭐☆</p>
+
+                <p class="price">Rs 280</p>
+
+                <button>Add to Cart</button>
+
+            </div>
+
+        </div>
+
+        <div class="card" data-name="flower clip">
+
+            <img src="a.jpeg">
+
+            <div class="info">
+
+                <h3>Flower Clip</h3>
+
+                <p>⭐⭐⭐⭐☆</p>
+
+                <p class="price">Rs 260</p>
+
+                <button>Add to Cart</button>
+
+            </div>
+
+        </div>
+
+        <div class="card" data-name="velvet scrunchie">
+
+            <img src="4.jpg">
+
+            <div class="info">
+
+                <h3>Velvet Scrunchie</h3>
+
+                <p>⭐⭐⭐⭐☆</p>
+
+                <p class="price">Rs 320</p>
+
+                <button>Add to Cart</button>
+
+            </div>
+
+        </div>
+
+        <div class="card" data-name="luxury bow">
+
+            <img src="i.jpeg">
+
+            <div class="info">
+
+                <h3>Luxury Bow</h3>
+
+                <p>⭐⭐⭐⭐☆</p>
+
+                <p class="price">Rs 390</p>
+
+                <button>Add to Cart</button>
+
+            </div>
+
+        </div>
+
+        <div class="card" data-name="velvet scrunchie">
+
+            <img src="f.jpeg">
+
+            <div class="info">
+
+                <h3>Stylish Hair pin</h3>
+
+                <p>⭐⭐⭐⭐☆</p>
+
+                <p class="price">Rs 320</p>
+
+                <button>Add to Cart</button>
+
+            </div>
+
+        </div>
+
+        <div class="card" data-name="velvet scrunchie">
+
+            <img src="g.jpeg">
+
+            <div class="info">
+
+                <h3>Pearl Hair bands</h3>
+
+                <p>⭐⭐⭐⭐☆</p>
+
+                <p class="price">Rs 320</p>
+
+                <button>Add to Cart</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+
+        <p>©2026 Crown Clips</p>
+
+    </footer>
+
+</body>
+
+</html>
